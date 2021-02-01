@@ -25,12 +25,27 @@ section {
   justify-content: center;
   align-items: center;
 
-  $colors: white, #E7CBA9, #AAD9CD, #E9BBB5, #8DA47E, #E8D595, #E9BBB5;
-  @for $i from 1 through length($colors) {
-    &:nth-child(#{$i}) {
-      background: nth($colors, $i)
-    }
-  }
+section:nth-child(1) {
+  background: white;
+}
+section:nth-child(2) {
+  background: #E7CBA9;
+}
+section:nth-child(3) {
+  background: #AAD9CD;
+}
+section:nth-child(4) {
+  background: #E9BBB5;
+}
+section:nth-child(5) {
+  background: #8DA47E;
+}
+section:nth-child(6) {
+  background: #E8D595;
+}
+section:nth-child(7) {
+  background: #E9BBB5;
+}
 }
 .nav {
   &__wrapper {
