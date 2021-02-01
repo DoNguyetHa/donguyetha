@@ -209,29 +209,43 @@ position: fixed ;
     </section>
 
     <section class="section section2" id="section2">
-     <iframe width="80%" height="80%" src="https://www.youtube.com/embed/a6gokWRUiEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+     <iframe width="65%" height="65%" src="https://www.youtube.com/embed/a6gokWRUiEY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
       
     </section>
 
     <section class="section section3" id="section3">
-<iframe width="840" height="472" src="https://www.youtube.com/embed/Ggf7NiY13FE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </section>
+<iframe width="65%" height="65%" src="https://www.youtube.com/embed/Ggf7NiY13FE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </section>
 
     <section class="section section4" id="section4">
-<iframe width="840" height="472" src="https://www.youtube.com/embed/S_ZFgVzuOrQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </section>
+<iframe width="65%" height="65%" src="https://www.youtube.com/embed/S_ZFgVzuOrQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </section>
 
     <section class="section section5" id="section5">
-<iframe width="840" height="472" src="https://www.youtube.com/embed/kcNsQ9I0CGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="65%" height="65%" src="https://www.youtube.com/embed/kcNsQ9I0CGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <section class="section section6" id="section6">
-<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fthongtinchinhphu%2Fvideos%2F697171947719595%2F&show_text=false&width=560" width="840" height="472" style="border:none;overflow:hidden" scrolling="no" frameborder="1" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fthongtinchinhphu%2Fvideos%2F697171947719595%2F&show_text=false&width=560" width="65%" height="65%" style="border:none;overflow:hidden" scrolling="no" frameborder="1" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
     </section>
 
 
   </div>
 </body>
 
-<script src="script.js">
+<script>
+// SMOOTH SCROLLING SECTIONS
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
 
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
 </script>
 </html>
