@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+  
+
 <style>
 .wrapper {
   min-height: 100vh;
@@ -148,12 +150,21 @@ img {
   z-index: 1;
   width: 50%;
 }
+
 </style>
+  
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
-
-
   <div class="wrapper" >
 
     <nav class="nav__wrapper" id="navbar-example">
@@ -236,16 +247,6 @@ img {
 
 
   </div>
-</body>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-  
 <div id="popup-overlay" class="overlay popup-overlay"></div>
 <div id="modal-overlay" class="overlay modal-overlay"></div>
 <script src="https://cpwebassets.codepen.io/assets/common/everypage-b61528ae2ce1c44a980ce1895a316ea4da923be416a7deb9e5de27b6f8de81e1.js"></script>
@@ -277,5 +278,8 @@ $('a[href*=#]:not([href=#])').click(function() {
 <script src="https://cpwebassets.codepen.io/assets/packs/js/everypage-d1402a1ff405704fa7ac.js"></script>
 <div id="react-popups"></div>
 <script src="https://cpwebassets.codepen.io/assets/editor/full/full_page_renderer-68d817ddab07bc9760b7fbc5f2d6796c23ed348c67db2aeb96ecee1dadf9e71d.js"></script>
+
+</body>
+  
 
 </html>
