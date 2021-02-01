@@ -3,10 +3,10 @@
 <style>
 .wrapper {
   min-height: 100vh;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 300;
   color: #fff;
-  position: relative; 
+  position: relative;
 }
 
 section {
@@ -14,132 +14,135 @@ section {
   font-size: 30px;
   font-weight: 80;
   background-color: #22A7F0;
-
   display: flex;
   justify-content: center;
   align-items: center;
+}
+section:nth-child(1) {
+  background: white;
+}
+section:nth-child(2) {
+  background: #E7CBA9;
+}
+section:nth-child(3) {
+  background: #AAD9CD;
+}
+section:nth-child(4) {
+  background: #E9BBB5;
+}
+section:nth-child(5) {
+  background: #8DA47E;
+}
+section:nth-child(6) {
+  background: #E8D595;
+}
+section:nth-child(7) {
+  background: #E9BBB5;
+}
 
-  $colors: white, #E7CBA9, #AAD9CD, #E9BBB5, #8DA47E, #E8D595, #E9BBB5;
-  @for $i from 1 through length($colors) {
-    &:nth-child(#{$i}) {
-      background: nth($colors, $i)
-    }
-  }
+.nav__wrapper {
+  position: fixed;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
 }
 .nav {
-  &__wrapper {
-    position: fixed;
-    height: 100%;
-    padding: 30px;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-  }
-
-  & {
-    margin: 0 0 100px 30px; 
-  }
-  &__counter {
-    font-size: 24px;
-    transition: all 0.15s ease-out;
-  }
-  &__title {
-    font-size: 32px;
-    font-weight: 500;
-    margin: 0 0 0.25em;
-    width: 300px;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
-  }
-  &__body {
-    font-weight: 370;
-    font-size: 30px;
-    font-size: 20px;
-    width: 400px;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
-  }
-  &__footer {
-    font-weight: 200;
-    font-size: 30px;
-    font-size: 30px;
-    width: 400px;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: height 0.3s ease-out, opacity 0.2s ease-out;
-  }
-  li {
-    position: relative;
-    transition: all 0.3s ease-out;
-    margin-bottom: 1em;
-
-    &:after {
-      content: '';
-      display: block;
-      border-left: 2px solid white;
-      border-top: 2px solid white;
-      height: 250px;
-      width: 20px;
-      position: absolute;
-      left: -30px;
-      top: 15px;
-    }
-
-    a {
-      display: block;
-      padding: 0;
-      color: #205566;
-      transition: all 0.15s ease-out;
-
-      &:hover {
-        background-color: transparent;
-        padding-left: 1em
-      }
-      &:focus {
-        background-color: transparent;
-      }
-    }
-
-    &.active {
-      pointer-events: none;
-      padding-left: 1em;
-
-      &:after {
-        width: 35px;
-        height: 400px;
-        top: 35px;
-      }
-
-      .nav__counter {
-        font-size: 48px;
-      }
-      .nav__title {
-        height: 40px;
-        opacity: 1;
-        overflow: visible;
-      }
-      .nav__body {
-        height: 100px;
-        opacity: 1;
-        overflow: visible;
-      }
-    }
-
-  }
-
+  margin: 0 0 100px 30px;
 }
+.nav__counter {
+  font-size: 24px;
+  transition: all 0.15s ease-out;
+}
+.nav__title {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 0.25em;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav__body {
+  font-weight: 370;
+  font-size: 30px;
+  font-size: 20px;
+  width: 400px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav__footer {
+  font-weight: 200;
+  font-size: 30px;
+  font-size: 30px;
+  width: 400px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav li {
+  position: relative;
+  transition: all 0.3s ease-out;
+  margin-bottom: 1em;
+}
+.nav li:after {
+  content: "";
+  display: block;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  height: 250px;
+  width: 20px;
+  position: absolute;
+  left: -30px;
+  top: 15px;
+}
+.nav li a {
+  display: block;
+  padding: 0;
+  color: #205566;
+  transition: all 0.15s ease-out;
+}
+.nav li a:hover {
+  background-color: transparent;
+  padding-left: 1em;
+}
+.nav li a:focus {
+  background-color: transparent;
+}
+.nav li.active {
+  pointer-events: none;
+  padding-left: 1em;
+}
+.nav li.active:after {
+  width: 35px;
+  height: 400px;
+  top: 35px;
+}
+.nav li.active .nav__counter {
+  font-size: 48px;
+}
+.nav li.active .nav__title {
+  height: 40px;
+  opacity: 1;
+  overflow: visible;
+}
+.nav li.active .nav__body {
+  height: 100px;
+  opacity: 1;
+  overflow: visible;
+}
+
 img {
-position: fixed ;
+  position: fixed;
   left: 700px;
   top: 515px;
   z-index: 1;
-  width:50%;
+  width: 50%;
 }
 </style>
 </head>
