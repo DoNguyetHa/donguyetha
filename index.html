@@ -120,24 +120,24 @@ section:nth-child(7) {
 .nav li a:focus {
   background-color: transparent;
 }
-.nav li.active {
+.nav li.in-view {
   pointer-events: none;
   padding-left: 1em;
 }
-.nav li.active:after {
+.nav li.in-view:after {
   width: 35px;
   height: 400px;
   top: 35px;
 }
-.nav li.active .nav__counter {
+.nav li.in-view .nav__counter {
   font-size: 48px;
 }
-.nav li.active .nav__title {
+.nav li.in-view .nav__title {
   height: 40px;
   opacity: 1;
   overflow: visible;
 }
-.nav li.active .nav__body {
+.nav li.in-view .nav__body {
   height: 100px;
   opacity: 1;
   overflow: visible;
@@ -169,7 +169,7 @@ img {
     <nav class="nav__wrapper" id="navbar-example">
       <ul class="nav">
 
-        <li role="presentation" class="active">
+        <li role="presentation" class="in-view">
           <a href="#section1">
             <span class="nav__counter">01</span>
             <h3 class="nav__title">Intro</h3>
@@ -262,7 +262,41 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
-</script>  
+</script>
+<script>
+var items = document.querySelectorAll(".nav li");
+ 
+// code for the isElementInViewport function
+ 
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+</script>
+<script>
+var items = document.querySelectorAll(".nav li");
+ 
+// code for the isElementInViewport function
+ 
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+</script>
+
+  
 </body>
 <script src="https://cpwebassets.codepen.io/assets/common/everypage-b61528ae2ce1c44a980ce1895a316ea4da923be416a7deb9e5de27b6f8de81e1.js"></script>
 <script src="https://fast.appcues.com/69186.js"></script>
