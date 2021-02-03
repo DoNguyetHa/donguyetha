@@ -130,12 +130,4 @@ section:nth-child(2) {
   overflow: visible;
 }
 
-img {
-  position: fixed;
-  left: 700px;
-  top: 515px;
-  z-index: 1;
-  width: 50%;
-}
-
 /*# sourceMappingURL=main.css.map */
