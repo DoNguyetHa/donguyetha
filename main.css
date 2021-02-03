@@ -37,6 +37,12 @@ section:nth-child(7) {
   background: #E9BBB5;
 }
 
+section:nth-child(2) {
+  background-image: url("https://lh3.googleusercontent.com/bnq9meaBKEYgbUFk4iCbUh0sRgDzp0EXxxVRW3q8BtQx7VgPcZlwgtkxh9cQtMu0YAg9KeGPlb7qezyThl0JxwOWox5nCD6Y-5vDY5zbum3iMZet-5iJyh-4CO-amf9ePbGPUiqP0A=w600-h315-p-k");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
 .nav__wrapper {
   position: fixed;
   height: 100%;
@@ -111,24 +117,24 @@ section:nth-child(7) {
 .nav li a:focus {
   background-color: transparent;
 }
-.nav li.in-view {
+.nav li.active {
   pointer-events: none;
   padding-left: 1em;
 }
-.nav li.in-view:after {
+.nav li.active:after {
   width: 35px;
   height: 400px;
   top: 35px;
 }
-.nav li.in-view .nav__counter {
+.nav li.active .nav__counter {
   font-size: 48px;
 }
-.nav li.in-view .nav__title {
+.nav li.active .nav__title {
   height: 40px;
   opacity: 1;
   overflow: visible;
 }
-.nav li.in-view .nav__body {
+.nav li.active .nav__body {
   height: 100px;
   opacity: 1;
   overflow: visible;
