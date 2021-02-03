@@ -60,7 +60,7 @@ section:nth-child(2) {
 }
 .nav__title {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 300;
   margin: 0 0 0.25em;
   width: 300px;
   height: 0;
@@ -69,20 +69,10 @@ section:nth-child(2) {
   transition: height 0.3s ease-out, opacity 0.2s ease-out;
 }
 .nav__body {
-  font-weight: 370;
-  font-size: 30px;
-  font-size: 20px;
-  width: 400px;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: height 0.3s ease-out, opacity 0.2s ease-out;
-}
-.nav__footer {
-  font-weight: 200;
-  font-size: 30px;
-  font-size: 30px;
-  width: 400px;
+  font-weight: 100;
+  font-size: 18px;
+  font-size: 18px;
+  width: 300px;
   height: 0;
   overflow: hidden;
   opacity: 0;
@@ -107,7 +97,7 @@ section:nth-child(2) {
 .nav li a {
   display: block;
   padding: 0;
-  color: #205566;
+  color: #fff;
   transition: all 0.15s ease-out;
 }
 .nav li a:hover {
